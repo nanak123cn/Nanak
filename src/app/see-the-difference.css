@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles (Mobile-First, <768px) */
+:root {
+  --primary-padding: clamp(0.5rem, 2vw, 1rem);
+  --primary-gap: clamp(0.5rem, 2vw, 1rem);
+  --title-size: clamp(20px, 5vw, 28px);
+  --subtitle-size: clamp(12px, 3vw, 14px);
+  --heading-size: clamp(12px, 3vw, 14px);
+  --description-size: clamp(10px, 2.5vw, 12px);
+}
+
+.see-the-difference-section {
+  padding: var(--primary-padding);
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: hidden; /* Prevent vertical scrolling */
+}
+
+.see-the-difference-person-container {
+  display: none; /* Hidden on mobile by default */
+}
+
+.see-the-difference-person-image {
+  object-fit: contain;
+  width: 100%; /* Adjusted from 150% to prevent overflow */
+  height: 100%; /* Adjusted from 150% to prevent overflow */
+  position: relative;
+  left: 0; /* Reset to avoid negative offset */
+  top: 0; /* Reset to avoid negative offset */
+  z-index: 0;
+}
+
+.see-the-difference-title {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--title-size);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.see-the-difference-subtitle {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--subtitle-size);
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 2rem 0;
+}
+
+.see-the-difference-container {
+  display: flex;
+  flex-direction: row; /* Row layout for mobile */
+  gap: var(--primary-gap);
+  justify-content: center; /* Center the cards */
+  align-items: center;
+  width: 100%; /* Full width for mobile */
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+}
+
+.see-the-difference-card {
+  flex: 1 1 100%;
+  max-width: 100%;
+  width: 260px; /* Scaled proportionally for mobile */
+  height: 230px; /* Scaled proportionally for mobile */
+  border-radius: 20px;
+  background-color: #A7E231; /* Green background */
+  padding: var(--primary-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--primary-gap);
+}
+
+.see-the-difference-image-container {
+  width: 215px; /* Scaled proportionally for mobile */
+  height: 169px; /* Scaled proportionally for mobile */
+  position: relative;
+  flex-shrink: 0;
+}
+
+.see-the-difference-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.see-the-difference-heading {
+  color: #fff; /* White font color */
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--heading-size);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Small Mobile (<479px) */
+@media (max-width: 479px) {
+  .see-the-difference-section {
+    padding: 2rem 0.5rem;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-container {
+    gap: 0.5rem;
+    flex-direction: row; /* Keep row layout */
+    justify-content: center; /* Center the cards */
+    width: 100%; /* Maintain full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-card {
+    padding: 0.5rem;
+    width: 200px; /* Further reduced for small screens */
+    height: 177px;
+  }
+
+  .see-the-difference-image-container {
+    width: 166px; /* Scaled proportionally */
+    height: 130px;
+  }
+
+  .see-the-difference-person-container {
+    display: none; /* Explicitly hide on small mobile */
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  :root {
+    --primary-padding: clamp(1rem, 2vw, 1.5rem);
+    --primary-gap: clamp(0.75rem, 1.5vw, 1rem);
+    --title-size: clamp(24px, 6vw, 32px);
+    --subtitle-size: clamp(14px, 3.5vw, 16px);
+    --heading-size: clamp(14px, 3.5vw, 16px);
+    --description-size: clamp(12px, 3vw, 14px);
+  }
+
+  .see-the-difference-section {
+    padding: 3rem 1.5rem;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-container {
+    flex-direction: row; /* Row layout for tablets */
+    gap: var(--primary-gap);
+    justify-content: center;
+    align-items: center; /* Center align items */
+    width: 100%; /* Use full width to avoid overflow */
+    max-width: 700px; /* Adjusted to fit cards comfortably */
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-card {
+    flex: 1 1 45%;
+    width: 300px; /* Scaled proportionally */
+    height: 265px;
+    padding: 1rem;
+  }
+
+  .see-the-difference-image-container {
+    width: 248px; /* Scaled proportionally */
+    height: 195px;
+  }
+
+  .see-the-difference-person-container {
+    display: block; /* Show on tablets */
+    position: absolute;
+    left: -5%;
+    top: 56%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    z-index: 999999; /* Ensure it stays on top */
+    overflow: hidden; /* Contain the image */
+  }
+}
+
+/* Tablet Landscape (768px - 1199px, including iPad Air ~1180px) */
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+  .see-the-difference-section {
+    padding: 3rem 2rem;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-container {
+    flex-direction: row; /* Row layout for tablets */
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center; /* Center align items */
+    width: 100%; /* Use full width to avoid overflow */
+    max-width: 900px; /* Adjusted to fit cards comfortably */
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-card {
+    flex: 1 1 45%;
+    width: 340px; /* Scaled proportionally */
+    height: 300px;
+    padding: 1.5rem;
+  }
+
+  .see-the-difference-image-container {
+    width: 282px; /* Scaled proportionally */
+    height: 222px;
+  }
+
+  .see-the-difference-person-container {
+    display: block; /* Show on tablets */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    z-index: 999999; /* Ensure it stays on top */
+    overflow: hidden; /* Contain the image */
+  }
+}
+
+/* Desktop (1200px and up, for laptops) */
+@media (min-width: 1200px) {
+  :root {
+    --primary-padding: clamp(1.5rem, 3vw, 2rem);
+    --primary-gap: clamp(1.5rem, 2vw, 2rem);
+    --title-size: clamp(28px, 7vw, 40px);
+    --subtitle-size: clamp(16px, 4vw, 20px);
+    --heading-size: clamp(16px, 4vw, 18px);
+    --description-size: clamp(14px, 3.5vw, 16px);
+  }
+
+  .see-the-difference-section {
+    padding: 4rem 2rem;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-container {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 850px; /* Approaching 900px */
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-card {
+    flex: 1 1 250px;
+    width: 360px; /* Approaching Figma design size */
+    height: 318px;
+    padding: 1.5rem;
+  }
+
+  .see-the-difference-image-container {
+    width: 298px; /* Approaching Figma design size */
+    height: 235px;
+  }
+
+  .see-the-difference-person-container {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 48%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    z-index: 999999; /* Ensure it stays on top */
+    overflow: hidden; /* Contain the image */
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .see-the-difference-section {
+    padding: 4rem 3rem;
+    max-width: 1440px;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-container {
+    gap: 2rem;
+    width: 900px; /* Matches requested width */
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+
+  .see-the-difference-card {
+    width: 380px; /* Matches Figma design */
+    height: 336px; /* Matches Figma design */
+    padding: 2rem;
+  }
+
+  .see-the-difference-image-container {
+    width: 315px; /* Matches Figma design */
+    height: 248px; /* Matches Figma design */
+  }
+
+  .see-the-difference-person-container {
+    width: 350px;
+    height: 350px;
+    z-index: 999999; /* Ensure it stays on top */
+    overflow: hidden; /* Contain the image */
+  }
+}
+
+/* High-Resolution Displays (e.g., Retina, including iPad Air) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .see-the-difference-image,
+  .see-the-difference-person-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .see-the-difference-section {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .see-the-difference-container {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .see-the-difference-card {
+    flex-direction: column;
+    border: none;
+    padding: 0.5rem;
+    max-width: 100%;
+    background-color: transparent; /* Remove green background for print */
+  }
+
+  .see-the-difference-image-container {
+    display: none;
+  }
+
+  .see-the-difference-person-container {
+    display: none;
+  }
+
+  .see-the-difference-title {
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .see-the-difference-subtitle {
+    font-size: 1rem;
+    color: #000;
+  }
+
+  .see-the-difference-heading {
+    font-size: 1rem;
+    color: #000; /* White text changed to black for print */
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .see-the-difference-card,
+  .see-the-difference-person-container {
+    transition: none !important;
+  }
+}

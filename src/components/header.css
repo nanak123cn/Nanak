@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  display: flex;
+}
+
+/* Responsive Logo Styles */
+.logo {
+  width: auto;
+  height: 55px; /* Ensures the logo size is consistent */
+}
+
+/* Navigation Links (Desktop) */
+.nav-links-desktop {
+  display: none; /* Hidden by default */
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0070f3; /* Example hover color */
+}
+
+/* Hamburger Menu (Mobile/Tablet) */
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: block; /* Visible by default on small screens */
+  color: #333; /* Set icon color */
+  margin: 0 1rem; /* Balanced margins for mobile */
+  z-index: 1001; /* Ensure button is above other elements */
+  position: relative; /* Necessary for positioning the icon container */
+  width: 30px;
+  height: 30px;
+}
+
+/* Icon Container for overlapping SVGs */
+.icon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Base styles for both SVGs */
+.hamburger-lines,
+.close-x {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Animation states for fading in and out */
+.fade-in {
+  opacity: 1;
+  transform: scale(1); /* Ensure it's at normal size */
+  pointer-events: auto; /* Allow interaction */
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.8); /* Slightly shrink when fading out */
+  pointer-events: none; /* Prevent interaction when invisible */
+}
+
+/* Navigation Links (Mobile) */
+.nav-links-mobile {
+  position: absolute;
+  top: 100%; /* Positions it directly below the header */
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  max-height: 0; /* Hides the menu initially */
+  overflow: hidden; /* Hide overflow for smooth transition */
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Smoother transition */
+  box-sizing: border-box; /* Prevent padding issues */
+  z-index: 999; /* Ensure menu is below hamburger but above other content */
+}
+
+/* Class to show the mobile menu */
+.nav-links-mobile.open {
+  max-height: 800px; /* Sufficient for all menu items */
+  padding: 1rem 0;
+}
+
+.nav-link-mobile {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-link-mobile:last-child {
+  border-bottom: none;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small mobile devices (max-width: 479px) */
+@media (max-width: 479px) {
+  .header {
+    padding: 1rem 0.5rem; /* Reduced padding for smaller screens */
+  }
+
+  .logo {
+    height: 45px; /* Slightly smaller logo for very small screens */
+  }
+
+  .hamburger-menu {
+    margin: 0 0.75rem; /* Adjusted margins for small screens */
+  }
+}
+
+/* Tablet view in landscape (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .header {
+    padding: 1rem 1.5rem; /* Adjusted padding for tablet landscape */
+  }
+
+  .logo {
+    height: 50px; /* Slightly smaller logo for tablet landscape */
+  }
+
+  .hamburger-menu {
+    margin: 0 1.25rem; /* Balanced margins for tablet landscape */
+  }
+
+  .nav-links-desktop {
+    display: none; /* Ensure desktop nav is hidden */
+  }
+}
+
+/* Desktop view (1024px and up) */
+@media (min-width: 1024px) {
+  .nav-links-desktop {
+    display: flex; /* Show desktop navigation */
+  }
+
+  .hamburger-menu {
+    display: none; /* Hide hamburger icon */
+  }
+
+  .nav-links-mobile {
+    display: none; /* Hide mobile menu */
+  }
+
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .logo-container {
+    margin-left: 2rem;
+  }
+
+  .nav-links-desktop {
+    margin-right: 2rem;
+  }
+}
+
+/* Large screens (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .header {
+    padding: 1rem 3rem; /* Increased padding for large screens */
+  }
+
+  .logo-container {
+    margin-left: 3rem; /* Adjusted for large screens */
+  }
+
+  .nav-links-desktop {
+    margin-right: 3rem; /* Balanced margin for desktop nav */
+  }
+}

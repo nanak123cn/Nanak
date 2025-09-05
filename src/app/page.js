@@ -375,6 +375,7 @@ export default function Home() {
                   height={400}
                   className='logo-image'
                   objectFit="contain"
+                  borderRadius="8px"
                 />
               </div>
             </div>

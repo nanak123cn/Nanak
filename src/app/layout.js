@@ -14,9 +14,9 @@ export const metadata = {
     locale: 'en_CA',
     type: 'website',
   },
-  icons: {
-    icon: '/title-logo.ico',
-  },
+  //icons: {
+  //  icon: '/title-logo.ico',
+  //},
 };
 
 export default function RootLayout({ children }) {
@@ -24,6 +24,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Nanak Duct Cleaning | Expert Air Duct Services" />
+        <meta property="og:description" content="Providing expert air duct, dryer vent, and furnace cleaning services." />
+        <meta property="og:image" content="title-logo.svg" />
+        <meta property="og:url" content="https://www.nanakductcleaning.com/" />
+        <meta property="og:type" content="website" />
       </head>
       <body>
         {/* Wrap children with the AOSProvider */}

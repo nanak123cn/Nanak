@@ -369,7 +369,7 @@ export default function Home() {
             <div className="hero-logo-container">
               <div className="logo-box">
                 <Image
-                  src="/logo.svg"
+                  src="/logo1.svg"
                   alt="Company Logo"
                   width={400}
                   height={400}

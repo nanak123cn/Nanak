@@ -13,7 +13,6 @@ export const metadata = {
     siteName: 'Nanak Duct Cleaning',
     locale: 'en_CA',
     type: 'website',
-  },
 images: [
       {
         url: 'https://nanakductcleaning.com/logo1.svg', // Replace with a high-quality image (at least 1200x630px)
@@ -22,6 +21,7 @@ images: [
         alt: 'Nanak Duct Cleaning van with professional cleaners.',
       },
     ],
+  },
   icons: {
     icon: '/title-logo.ico',
   },

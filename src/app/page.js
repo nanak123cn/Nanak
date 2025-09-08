@@ -43,19 +43,20 @@ const faqData = [
 
 const testimonialsData = [
   {
-    name: "John Doe",
+    name: "Candice M",
     profilePic: "/profile-pic-1.svg",
     review: "They did an amazing job cleaning our ducts and the price was not bad either. I can smell the difference. Thanks guys!",
   },
-  {
-    name: "Jane Smith",
-    profilePic: "/profile-pic-2.svg",
-    review: "Professional and thorough. Highly recommend their services!",
-  },
+      {
+        name: "Alex Bangura",
+        profilePic: "/profile-pic-2.svg",
+        review: `Excellent service from Nanak and team!
+Hi, I'm Alex from Brampton ON. I had a fantastic experience with Nanak Duct Cleaning! The team was professional and thoroughly cleaned all our air vents plus the laundry vent, which was really clogged.`,
+      },
   {
     name: "Mike Johnson",
     profilePic: "/profile-pic-3.svg",
-    review: "Great service, friendly team, and noticeable improvement in air quality.",
+    review: "They provide Best Cleaning services in GTA. The staff is very professional and helpful. If you wanna get the fabulous services just reach out to them. The money you gonna spend will definitely be worth it.",
   },
 ];
 
@@ -67,17 +68,17 @@ const benefitsData = [
   },
   {
     title: "Lower Energy Bills",
-    description: "Clean ducts improve HVAC performance, reducing energy costs.",
+    description: "Clean ducts can improve your HVAC efficiency.",
     image: "/lower-energy-bills.svg",
   },
   {
     title: "Reduced Allergens and Dust",
-    description: "Remove allergens and dust for a cleaner living space.",
+    description: "Keep your home free from contaminants.",
     image: "/reduced-allergens.svg",
   },
   {
     title: "Extended System Lifespan",
-    description: "Regular cleaning prevents wear and tear, prolonging your HVAC system’s life.",
+    description: "Regular cleaning ensures longevity of your system.",
     image: "/extended-lifespan.svg",
   },
 ];
@@ -85,17 +86,17 @@ const benefitsData = [
 const howItWorksData = [
   {
     step: "Step 1: Inspection",
-    description: "We assess your HVAC system to identify areas needing attention.",
+    description: "We assess your ductwork for any issues.",
     image: "/inspection.svg",
   },
   {
     step: "Step 2: Cleaning",
-    description: "Using advanced tools, we remove dust and debris from ducts and vents.",
+    description: "Using professional equipment, we clean your ducts.",
     image: "/cleaning.svg",
   },
   {
     step: "Step 3: Final Check",
-    description: "We ensure your system is clean and functioning optimally.",
+    description: "We ensure everything is in top condition before leaving.",
     image: "/final-check.svg",
   },
 ];
@@ -204,9 +205,9 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="service-content-container">
-                <h5 className="service-heading">Duct Cleaning</h5>
+                <h5 className="service-heading">Commercial Air Duct Cleaning</h5>
                 <p className="service-description">
-                  Thorough cleaning to enhance air quality and system efficiency.
+                  Comprehensive inspections to ensure your HVAC runs smoothly.
                 </p>
               </div>
             </div>
@@ -221,9 +222,10 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="service-content-container">
-                <h5 className="service-heading">Furnace Cleaning</h5>
+                <h5 className="service-heading">Dryer Vent Cleaning</h5>
                 <p className="service-description">
-                  Comprehensive cleaning for better performance and energy savings.
+                  Prevent fires and improve 
+dryer efficiency with our cleaning service.
                 </p>
               </div>
             </div>
@@ -240,7 +242,7 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="service-content-container">
-                <h3>Specialized Cleaning Solutions</h3>
+                <h3>Residential Duct Cleaning</h3>
                 <p>
                   We offer advanced services to meet specific needs, ensuring your entire HVAC system is in pristine condition.
                 </p>

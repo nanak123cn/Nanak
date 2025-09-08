@@ -1,10 +1,11 @@
 // layout.js
 import './globals.css';
 import AOSProvider from '@/components/AOSProvider';
+import ScrollToTopButton from '@/components/ScrollToTopButton'; // Import the component
 
 export const metadata = {
   metadataBase: new URL('https://nanakductcleaning.com'),
-    title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
+    title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
   description: 'Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services.',
   keywords: 'duct cleaning, furnace cleaning, air duct cleaning, dryer vent cleaning, GTA, Toronto, Mississauga, Brampton, Canada',
   author: 'Nanak Duct Cleaning',
@@ -15,13 +16,13 @@ export const metadata = {
     locale: 'en_CA',
     type: 'website',
 images: [
-      {
-        url: '/logo1.png', // Replace with a high-quality image (at least 1200x630px)
-        width: 1200,
-        height: 630,
-        alt: 'Nanak Duct Cleaning van with professional cleaners.',
-      },
-    ],
+      {
+        url: '/logo1.png', // Replace with a high-quality image (at least 1200x630px)
+        width: 1200,
+        height: 630,
+        alt: 'Nanak Duct Cleaning van with professional cleaners.',
+      },
+    ],
   },
   icons: {
     icon: '/title-logo.ico',
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           <div className="container-max-width">
             {children}
           </div>
+          <ScrollToTopButton /> {/* Correct placement: inside the main JSX tree */}
         </AOSProvider>
       </body>
     </html>

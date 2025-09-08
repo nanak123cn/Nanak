@@ -23,10 +23,10 @@ const faqData = [
     question: "Why should I get my air ducts cleaned?",
     answer: "Regular air duct cleaning removes dust, allergens, pet dander, and other contaminants from your HVAC system. This improves indoor air quality, helps your system run more efficiently, and can reduce energy costs.",
   },
-  {
-    question: "How often should I have my air ducts cleaned?",
-    answer: "For most homes, it&apos;s recommended to have your air ducts cleaned every 3 to 5 years. However, if you have pets, allergies, or have recently completed a home renovation, you may want to clean them more frequently.",
-  },
+{
+  "question": "How often should I have my air ducts cleaned?",
+  "answer": "For most homes, it's recommended to have your air ducts cleaned every 3 to 5 years. However, if you have pets, allergies, or have recently completed a home renovation, you may want to clean them more frequently."
+},
   {
     question: "How long does a typical duct cleaning take?",
     answer: "The duration of the cleaning process depends on the size of your home and the complexity of your ductwork. A typical residential cleaning usually takes between 2 to 4 hours.",
@@ -35,10 +35,10 @@ const faqData = [
     question: "Do you use safe and eco-friendly cleaning methods?",
     answer: "Yes, we use powerful, truck-mounted vacuum systems and specialized tools to agitate and remove contaminants. Our methods are safe for your family, pets, and the environment, without the use of harsh chemicals.",
   },
-  {
-    question: "What is included in a standard duct cleaning service?",
-    answer: "Our standard service includes a thorough cleaning of all supply and return vents, the main trunk lines, and the furnace&apos;s blower fan and cabinet. We also provide a complete inspection of your ductwork to ensure no issues are present.",
-  },
+{
+  "question": "What is included in a standard duct cleaning service?",
+  "answer": "Our standard service includes a thorough cleaning of all supply and return vents, the main trunk lines, and the furnace's blower fan and cabinet. We also provide a complete inspection of your ductwork to ensure no issues are present."
+},
 ];
 
 const testimonialsData = [

@@ -3,7 +3,8 @@ import './globals.css';
 import AOSProvider from '@/components/AOSProvider';
 
 export const metadata = {
-  title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
+  metadataBase: new URL('https://nanakductcleaning.com'),
+    title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
   description: 'Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services.',
   keywords: 'duct cleaning, furnace cleaning, air duct cleaning, dryer vent cleaning, GTA, Toronto, Mississauga, Brampton, Canada',
   author: 'Nanak Duct Cleaning',
@@ -15,7 +16,7 @@ export const metadata = {
     type: 'website',
 images: [
       {
-        url: 'https://nanakductcleaning.com/logo1.svg', // Replace with a high-quality image (at least 1200x630px)
+        url: 'https://nanakductcleaning.com/logo1.png', // Replace with a high-quality image (at least 1200x630px)
         width: 1200,
         height: 630,
         alt: 'Nanak Duct Cleaning van with professional cleaners.',

@@ -1,0 +1,14 @@
+# robots.txt for nanakductcleaning.com
+
+User-agent: *
+Allow: /
+
+# Block sensitive files & folders
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemap for search engines
+Sitemap: https://nanakductcleaning.com/sitemap.xml

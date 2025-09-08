@@ -49,13 +49,13 @@ const testimonialsData = [
   },
       {
         name: "Alex Bangura",
-        profilePic: "/profile-pic-2.svg",
+        profilePic: "/profile-pic-3.svg",
         review: `Excellent service from Nanak and team!
 Hi, I'm Alex from Brampton ON. I had a fantastic experience with Nanak Duct Cleaning! The team was professional and thoroughly cleaned all our air vents plus the laundry vent, which was really clogged.`,
       },
   {
-    name: "Mike Johnson",
-    profilePic: "/profile-pic-3.svg",
+    name: "Dilpreet Sidhu",
+    profilePic: "/profile-pic-2.svg",
     review: "They provide Best Cleaning services in GTA. The staff is very professional and helpful. If you wanna get the fabulous services just reach out to them. The money you gonna spend will definitely be worth it.",
   },
 ];

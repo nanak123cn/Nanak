@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import emailjs from '@emailjs/browser'; // Import EmailJS
 import './home.css';
 import './testimonials.css';
 import './how-it-works.css';
@@ -23,10 +24,10 @@ const faqData = [
     question: "Why should I get my air ducts cleaned?",
     answer: "Regular air duct cleaning removes dust, allergens, pet dander, and other contaminants from your HVAC system. This improves indoor air quality, helps your system run more efficiently, and can reduce energy costs.",
   },
-{
-  "question": "How often should I have my air ducts cleaned?",
-  "answer": "For most homes, it's recommended to have your air ducts cleaned every 3 to 5 years. However, if you have pets, allergies, or have recently completed a home renovation, you may want to clean them more frequently."
-},
+  {
+    "question": "How often should I have my air ducts cleaned?",
+    "answer": "For most homes, it's recommended to have your air ducts cleaned every 3 to 5 years. However, if you have pets, allergies, or have recently completed a home renovation, you may want to clean them more frequently."
+  },
   {
     question: "How long does a typical duct cleaning take?",
     answer: "The duration of the cleaning process depends on the size of your home and the complexity of your ductwork. A typical residential cleaning usually takes between 2 to 4 hours.",
@@ -35,10 +36,10 @@ const faqData = [
     question: "Do you use safe and eco-friendly cleaning methods?",
     answer: "Yes, we use powerful, truck-mounted vacuum systems and specialized tools to agitate and remove contaminants. Our methods are safe for your family, pets, and the environment, without the use of harsh chemicals.",
   },
-{
-  "question": "What is included in a standard duct cleaning service?",
-  "answer": "Our standard service includes a thorough cleaning of all supply and return vents, the main trunk lines, and the furnace's blower fan and cabinet. We also provide a complete inspection of your ductwork to ensure no issues are present."
-},
+  {
+    "question": "What is included in a standard duct cleaning service?",
+    "answer": "Our standard service includes a thorough cleaning of all supply and return vents, the main trunk lines, and the furnace's blower fan and cabinet. We also provide a complete inspection of your ductwork to ensure no issues are present."
+  },
 ];
 
 const testimonialsData = [
@@ -47,12 +48,12 @@ const testimonialsData = [
     profilePic: "/profile-pic-1.svg",
     review: "They did an amazing job cleaning our ducts and the price was not bad either. I can smell the difference. Thanks guys!",
   },
-      {
-        name: "Alex Bangura",
-        profilePic: "/profile-pic-3.svg",
-        review: `Excellent service from Nanak and team!
+  {
+    name: "Alex Bangura",
+    profilePic: "/profile-pic-3.svg",
+    review: `Excellent service from Nanak and team!
 Hi, I'm Alex from Brampton ON. I had a fantastic experience with Nanak Duct Cleaning! The team was professional and thoroughly cleaned all our air vents plus the laundry vent, which was really clogged.`,
-      },
+  },
   {
     name: "Dilpreet Sidhu",
     profilePic: "/profile-pic-2.svg",
@@ -319,12 +320,12 @@ const SeeTheDifferenceSection = () => {
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [formStatus, setFormStatus] = useState(''); // 'success', 'error', or ''
 
   const handleFaqClick = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
-  // Function to scroll to Contact Us section
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-us');
     if (contactSection) {
@@ -332,9 +333,24 @@ export default function Home() {
     }
   };
 
-  // Function to open WhatsApp link
   const openWhatsApp = () => {
     window.open('https://wa.me/14167291521', '_blank');
+  };
+
+  const handleEmailjsSubmit = (event) => {
+    event.preventDefault(); // Prevents the form from submitting in the traditional way
+
+    setFormStatus('sending');
+
+    emailjs.sendForm('service_4k1b8td', 'template_67c3o2i', event.target, 'sexLs5SvglsjqHhqp')
+      .then((result) => {
+        console.log(result.text);
+        setFormStatus('success');
+        event.target.reset(); // Reset form fields
+      }, (error) => {
+        console.log(error.text);
+        setFormStatus('error');
+      });
   };
 
   return (
@@ -510,13 +526,19 @@ export default function Home() {
             </div>
             <div className="contact-right" data-aos="fade-up" data-aos-delay="400">
               <div className="contact-form-container">
-                <form className="contact-form">
-                  <input type="text" id="name" placeholder="Your Name" className="form-input" />
-                  <input type="email" id="email" placeholder="Email" className="form-input" />
-                  <input type="tel" id="phone" placeholder="Phone Number" className="form-input" />
-                  <textarea id="message" placeholder="Message" className="form-textarea"></textarea>
+                {/* Add onSubmit handler to the form */}
+                <form className="contact-form" onSubmit={handleEmailjsSubmit}>
+                  {/* Add name attributes to each input */}
+                  <input type="text" name="from_name" id="name" placeholder="Your Name" className="form-input" required/>
+                  <input type="email" name="from_email" id="email" placeholder="Email" className="form-input" required/>
+                  <input type="tel" name="phone_number" id="phone" placeholder="Phone Number" className="form-input" />
+                  <textarea name="message" id="message" placeholder="Message" className="form-textarea" required></textarea>
                   <button type="submit" className="form-button small-button">Send</button>
                 </form>
+                {/* Display form status */}
+                {formStatus === 'sending' && <p>Sending your message...</p>}
+                {formStatus === 'success' && <p style={{color: 'green'}}>Message sent successfully!</p>}
+                {formStatus === 'error' && <p style={{color: 'red'}}>Failed to send message. Please try again.</p>}
               </div>
             </div>
           </div>

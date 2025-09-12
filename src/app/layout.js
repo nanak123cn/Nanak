@@ -7,7 +7,7 @@ export const metadata = {
   metadataBase: new URL('https://nanakductcleaning.com'),
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
   description: 'Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services.',
-  keywords: 'duct cleaning, furnace cleaning, air duct cleaning, dryer vent cleaning, GTA, Toronto, Mississauga, Brampton, Canada',
+  keywords: 'duct cleaning in Canada, duct cleaning Brampton, duct cleaning Toronto, duct cleaning Mississauga, duct cleaning GTA, furnace cleaning, air duct cleaning, dryer vent cleaning, vent cleaning services Canada, professional duct cleaning, HVAC cleaning, commercial duct cleaning, residential duct cleaning, best duct cleaning services Canada, affordable duct cleaning, indoor air quality improvement, energy savings, certified duct cleaners, Nanak Duct Cleaning services',
   author: 'Nanak Duct Cleaning',
   openGraph: {
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',

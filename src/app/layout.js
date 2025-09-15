@@ -25,7 +25,7 @@ images: [
     ],
   },
   icons: {
-    icon: '/title-logo.ico',
+    icon: '/favicon.ico',
   },
 };
 

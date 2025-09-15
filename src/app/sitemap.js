@@ -2,47 +2,48 @@
 
 export default async function sitemap() {
   const baseUrl = "https://nanakductcleaning.com";
+  const now = new Date().toISOString();
 
   return [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/residential-duct-cleaning`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/commercial-duct-cleaning`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/dryer-vent-cleaning`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "yearly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: now,
       changefreq: "yearly",
       priority: 0.7,
     },

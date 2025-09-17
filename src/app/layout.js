@@ -41,6 +41,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-T54H29T4P4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T54H29T4P4');
+          `}
+        </Script>
       </head>
       <body>
         {/* Wrap children with the AOSProvider */}

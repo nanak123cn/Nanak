@@ -2,7 +2,7 @@
 import './globals.css';
 import AOSProvider from '@/components/AOSProvider';
 import ScrollToTopButton from '@/components/ScrollToTopButton'; // Import the component
-
+import Script from 'next/script'; // ✅ import Script here
 export const metadata = {
   metadataBase: new URL('https://nanakductcleaning.com'),
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',

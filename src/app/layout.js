@@ -39,23 +39,49 @@ images: [
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-        <link rel="canonical" href="https://www.nanakductcleaning.com/" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-T54H29T4P4"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-T54H29T4P4');
-          `}
-        </Script>
-      </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {/* Favicon (absolute URL for SEO & Google Search) */}
+  <link rel="icon" href="https://www.nanakductcleaning.com/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://www.nanakductcleaning.com/favicon.ico" type="image/x-icon" />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://www.nanakductcleaning.com/" />
+
+  {/* Structured Data for favicon/logo */}
+  <script type="application/ld+json" dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.nanakductcleaning.com/",
+      "name": "Nanak Duct Cleaning",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nanak Duct Cleaning",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.nanakductcleaning.com/favicon.ico"
+        }
+      }
+    })
+  }} />
+
+  {/* Google Analytics */}
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-T54H29T4P4"
+    strategy="afterInteractive"
+  />
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T54H29T4P4');
+    `}
+  </Script>
+</head>
+
       <body>
         {/* Wrap children with the AOSProvider */}
         <AOSProvider>

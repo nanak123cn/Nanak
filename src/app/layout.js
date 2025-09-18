@@ -3,6 +3,7 @@ import './globals.css';
 import AOSProvider from '@/components/AOSProvider';
 import ScrollToTopButton from '@/components/ScrollToTopButton'; // Import the component
 import Script from 'next/script'; // ✅ import Script here
+import Favicon from '/public/favicon.ico'; // ✅ import the favicon
 export const metadata = {
   metadataBase: new URL('https://www.nanakductcleaning.com'),
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
@@ -24,16 +25,7 @@ images: [
       },
     ],
   },
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png?v=4', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png?v=4', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-48x48.png?v=4', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-64x64.png?v=4', sizes: '64x64', type: 'image/png' },
-      { url: '/favicon-180x180.png?v=4', sizes: 'any' }, // multi-size ICO
-    ],
-    apple: '/favicon-180x180.png?v=4', // Apple touch icon
-  },
+icons: [{ rel: 'icon', url: Favicon.src }], // ✅ use imported favicon
 };
 
 export default function RootLayout({ children }) {
@@ -43,8 +35,8 @@ export default function RootLayout({ children }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {/* Favicon (absolute URL for SEO & Google Search) */}
-  <link rel="icon" href="/favicon-180x180.png?v=4" type="image/x-icon" />
-  <link rel="shortcut icon" href="/favicon-180x180.png?v=4" type="image/x-icon" />
+        <link rel="icon" href={Favicon.src} type="image/x-icon" />
+        <link rel="shortcut icon" href={Favicon.src} type="image/x-icon" />
 
 
   {/* Canonical URL */}
@@ -62,7 +54,7 @@ export default function RootLayout({ children }) {
         "name": "Nanak Duct Cleaning",
         "logo": {
           "@type": "ImageObject",
-          "url": "/favicon-180x180.png?v=4"
+          url: Favicon.src,
         }
       }
     })

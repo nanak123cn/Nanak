@@ -30,7 +30,7 @@ images: [
       { url: '/favicon-32x32.png?v=4', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-48x48.png?v=4', sizes: '48x48', type: 'image/png' },
       { url: '/favicon-64x64.png?v=4', sizes: '64x64', type: 'image/png' },
-      { url: '/favicon.ico?v=4', sizes: 'any' }, // multi-size ICO
+      { url: '/favicon-180x180.png?v=4', sizes: 'any' }, // multi-size ICO
     ],
     apple: '/favicon-180x180.png?v=4', // Apple touch icon
   },

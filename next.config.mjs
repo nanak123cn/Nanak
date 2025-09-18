@@ -9,14 +9,8 @@ const nextConfig = {
         destination: 'https://www.nanakductcleaning.com/:path*',
         permanent: true,
       },
-      {
-        // Redirect all http to https (Vercel usually auto-handles this,
-        // but this makes sure Next.js enforces it too)
-        source: '/:path*',
-        has: [{ type: 'protocol', value: 'http' }],
-        destination: 'https://www.nanakductcleaning.com/:path*',
-        permanent: true,
-      },
+      // Remove the invalid protocol redirect
+      // Vercel automatically handles HTTP → HTTPS for custom domains
     ];
   },
 };

@@ -25,7 +25,9 @@ images: [
       },
     ],
   },
-icons: [{ rel: 'icon', url: Favicon.src }], // ✅ use imported favicon
+  icons: {
+    icon: [{ url: '/favicon.ico' }], // ✅ only favicon.ico
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -54,7 +56,7 @@ export default function RootLayout({ children }) {
         "name": "Nanak Duct Cleaning",
         "logo": {
           "@type": "ImageObject",
-          url: Favicon.src,
+          url: '/favicon.ico',
         }
       }
     })

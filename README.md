@@ -90,6 +90,6 @@ The easiest way to deploy this Next.js application is to use the [Vercel Platfor
 The project is already pre-configured for Vercel, so deployment is as simple as linking your Git repository.
 
 ```
-
+ 
 Do you also want me to create a **README.md file** with this content so you can directly use it in your project repository?
 ```

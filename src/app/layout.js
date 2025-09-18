@@ -43,8 +43,8 @@ export default function RootLayout({ children }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {/* Favicon (absolute URL for SEO & Google Search) */}
-  <link rel="icon" href="https://www.nanakductcleaning.com/favicon.ico?v=4" type="image/x-icon" />
-  <link rel="shortcut icon" href="https://www.nanakductcleaning.com/favicon.ico?v=4" type="image/x-icon" />
+  <link rel="icon" href="/favicon-180x180.png?v=4" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon-180x180.png?v=4" type="image/x-icon" />
 
 
   {/* Canonical URL */}
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         "name": "Nanak Duct Cleaning",
         "logo": {
           "@type": "ImageObject",
-          "url": "/favicon.ico"
+          "url": "/favicon-180x180.png?v=4"
         }
       }
     })

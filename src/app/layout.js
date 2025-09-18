@@ -26,13 +26,13 @@ images: [
   },
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-64x64.png', sizes: '64x64', type: 'image/png' },
-      { url: '/favicon.ico', sizes: 'any' }, // multi-size ICO
+      { url: '/favicon-16x16.png?v=4', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png?v=4', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png?v=4', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-64x64.png?v=4', sizes: '64x64', type: 'image/png' },
+      { url: '/favicon.ico?v=4', sizes: 'any' }, // multi-size ICO
     ],
-    apple: '/favicon-180x180.png', // Apple touch icon
+    apple: '/favicon-180x180.png?v=4', // Apple touch icon
   },
 };
 
@@ -43,8 +43,9 @@ export default function RootLayout({ children }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {/* Favicon (absolute URL for SEO & Google Search) */}
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://www.nanakductcleaning.com/favicon.ico?v=4" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://www.nanakductcleaning.com/favicon.ico?v=4" type="image/x-icon" />
+
 
   {/* Canonical URL */}
   <link rel="canonical" href="https://www.nanakductcleaning.com/" />

@@ -10,9 +10,10 @@ const nextConfig = {
         permanent: true,
       },
       {
-        // Redirect http://www to https://www
+        // Redirect all http to https (Vercel usually auto-handles this,
+        // but this makes sure Next.js enforces it too)
         source: '/:path*',
-        has: [{ type: 'host', value: 'http://www.nanakductcleaning.com' }],
+        has: [{ type: 'protocol', value: 'http' }],
         destination: 'https://www.nanakductcleaning.com/:path*',
         permanent: true,
       },

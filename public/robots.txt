@@ -12,4 +12,5 @@ Disallow: /private/
 Disallow: /admin/
 
 # Sitemap for search engines
-Sitemap: https://nanakductcleaning.com/sitemap.xml
+Sitemap: https://www.nanakductcleaning.com/sitemap.xml
+

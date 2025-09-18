@@ -1,7 +1,7 @@
 // app/sitemap.js
 
 export default async function sitemap() {
-  const baseUrl = "https://nanakductcleaning.com";
+const baseUrl = "https://www.nanakductcleaning.com";
   const now = new Date().toISOString();
 
   return [

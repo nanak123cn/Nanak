@@ -4,7 +4,7 @@ import AOSProvider from '@/components/AOSProvider';
 import ScrollToTopButton from '@/components/ScrollToTopButton'; // Import the component
 import Script from 'next/script'; // ✅ import Script here
 export const metadata = {
-  metadataBase: new URL('https://nanakductcleaning.com'),
+  metadataBase: new URL('https://www.nanakductcleaning.com'),
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
   description: 'Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services.',
   keywords: 'duct cleaning in Canada, duct cleaning Brampton, duct cleaning Toronto, duct cleaning Mississauga, duct cleaning GTA, furnace cleaning, air duct cleaning, dryer vent cleaning, vent cleaning services Canada, professional duct cleaning, HVAC cleaning, commercial duct cleaning, residential duct cleaning, best duct cleaning services Canada, affordable duct cleaning, indoor air quality improvement, energy savings, certified duct cleaners, Nanak Duct Cleaning services',
@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T54H29T4P4"
           strategy="afterInteractive"

@@ -35,6 +35,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta 
+    name="description" 
+    content="Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services."
+  />
 
   {/* Favicon (absolute URL for SEO & Google Search) */}
         <link rel="icon" href={Favicon.src} type="image/x-icon" />

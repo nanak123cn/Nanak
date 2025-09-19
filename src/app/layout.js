@@ -7,12 +7,12 @@ import Favicon from '/public/favicon.ico'; // ✅ import the favicon
 export const metadata = {
   metadataBase: new URL('https://www.nanakductcleaning.com'),
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
-  description: 'Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services.',
+  description: 'Professional duct, dryer vent & furnace cleaning in Brampton, Toronto & GTA. Trusted experts improving indoor air quality at affordable prices.',
   keywords: 'duct cleaning in Canada, duct cleaning Brampton, duct cleaning Toronto, duct cleaning Mississauga, duct cleaning GTA, furnace cleaning, air duct cleaning, dryer vent cleaning, vent cleaning services Canada, professional duct cleaning, HVAC cleaning, commercial duct cleaning, residential duct cleaning, best duct cleaning services Canada, affordable duct cleaning, indoor air quality improvement, energy savings, certified duct cleaners, Nanak Duct Cleaning services',
   author: 'Nanak Duct Cleaning',
   openGraph: {
     title: 'Nanak Duct Cleaning | Professional Duct Cleaning Services in Canada',
-    description: 'Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services.',
+    description: 'Professional duct, dryer vent & furnace cleaning in Brampton, Toronto & GTA. Trusted experts improving indoor air quality at affordable prices.',
     siteName: 'Nanak Duct Cleaning',
     locale: 'en_CA',
     type: 'website',
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta 
     name="description" 
-    content="Nanak Duct Cleaning provides expert air duct, dryer vent, and furnace cleaning services in Brampton, Toronto, and the Greater Toronto Area. Improve your indoor air quality and save on energy bills with our reliable and affordable services."
+    content="Professional duct, dryer vent & furnace cleaning in Brampton, Toronto & GTA. Trusted experts improving indoor air quality at affordable prices."
   />
 
   {/* Favicon (absolute URL for SEO & Google Search) */}
